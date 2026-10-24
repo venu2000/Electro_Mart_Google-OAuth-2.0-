@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1500" viewBox="0 0 2200 1500" font-family="'Comic Sans MS', 'Trebuchet MS', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333333"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D32F2F"/>
+    </marker>
+  </defs>
+
+  <!-- Background and title -->
+  <rect x="0" y="0" width="2200" height="1500" fill="#FFFFFF"/>
+  <text x="1100" y="50" font-size="28" font-weight="bold" text-anchor="middle" fill="#222222">Google OAuth2 Login to JWT Cookie: Class and Method Flow</text>
+
+  <!-- Swimlanes -->
+  <rect x="30" y="80" width="2140" height="260" fill="#F3FAFE" stroke="#999999" stroke-width="1.5"/>
+  <rect x="30" y="340" width="2140" height="260" fill="#FFFCEB" stroke="#999999" stroke-width="1.5"/>
+  <rect x="30" y="600" width="2140" height="260" fill="#F1FBF3" stroke="#999999" stroke-width="1.5"/>
+  <rect x="30" y="860" width="2140" height="260" fill="#FFF6EE" stroke="#999999" stroke-width="1.5"/>
+
+  <!-- Lane labels -->
+  <rect x="30" y="80" width="190" height="260" fill="#A8D8F0" stroke="#333333" stroke-width="2"/>
+  <rect x="30" y="340" width="190" height="260" fill="#FFF2A8" stroke="#333333" stroke-width="2"/>
+  <rect x="30" y="600" width="190" height="260" fill="#B9E8C0" stroke="#333333" stroke-width="2"/>
+  <rect x="30" y="860" width="190" height="260" fill="#FFD1A6" stroke="#333333" stroke-width="2"/>
+  <text x="125" y="200" font-size="14" font-weight="bold" text-anchor="middle" fill="#222222">React Frontend</text>
+  <text x="125" y="220" font-size="12" text-anchor="middle" fill="#222222">localhost:5173</text>
+  <text x="125" y="460" font-size="14" font-weight="bold" text-anchor="middle" fill="#222222">Spring Security</text>
+  <text x="125" y="478" font-size="14" font-weight="bold" text-anchor="middle" fill="#222222">Filter Chain</text>
+  <text x="125" y="496" font-size="12" text-anchor="middle" fill="#222222">localhost:8080</text>
+  <text x="125" y="720" font-size="14" font-weight="bold" text-anchor="middle" fill="#222222">Spring Boot</text>
+  <text x="125" y="738" font-size="12" text-anchor="middle" fill="#222222">Services (Java)</text>
+  <text x="125" y="980" font-size="16" font-weight="bold" text-anchor="middle" fill="#222222">Google</text>
+  <text x="125" y="1000" font-size="11" text-anchor="middle" fill="#222222">accounts.google.com</text>
+
+  <!-- Row 1 boxes: steps 1 to 8 -->
+  <!-- 1 Frontend -->
+  <rect x="250" y="110" width="200" height="100" rx="12" fill="#A8D8F0" stroke="#333333" stroke-width="2"/>
+  <text x="350" y="132" font-size="11" font-weight="bold" text-anchor="middle" fill="#222222">1. Continue with Google</text>
+  <text x="350" y="147" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">authService.js</text>
+  <text x="350" y="162" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">loginWithGoogle()</text>
+  <text x="350" y="177" font-size="10.5" text-anchor="middle" fill="#222222">Browser opens backend</text>
+  <text x="350" y="192" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">/oauth2/authorization/google</text>
+
+  <!-- 2 Security -->
+  <rect x="480" y="370" width="200" height="100" rx="12" fill="#FFF2A8" stroke="#333333" stroke-width="2"/>
+  <text x="580" y="392" font-size="11" font-weight="bold" text-anchor="middle" fill="#222222">2. Spring built-in filter</text>
+  <text x="580" y="407" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">OAuth2AuthorizationRequest</text>
+  <text x="580" y="422" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">RedirectFilter</text>
+  <text x="580" y="437" font-size="10.5" text-anchor="middle" fill="#222222">302 to Google: client_id,</text>
+  <text x="580" y="452" font-size="10.5" text-anchor="middle" fill="#222222">scope=openid profile email</text>
+
+  <!-- 3 Google -->
+  <rect x="710" y="890" width="200" height="100" rx="12" fill="#FFD1A6" stroke="#333333" stroke-width="2"/>
+  <text x="810" y="912" font-size="11" font-weight="bold" text-anchor="middle" fill="#222222">3. Google login page</text>
+  <text x="810" y="927" font-size="10.5" text-anchor="middle" fill="#222222">User signs in and</text>
+  <text x="810" y="942" font-size="10.5" text-anchor="middle" fill="#222222">approves consent</text>
+
+  <!-- 4 Google -->
+  <rect x="940" y="890" width="200" height="100" rx="12" fill="#FFD1A6" stroke="#333333" stroke-width="2"/>
+  <text x="1040" y="912" font-size="11" font-weight="bold" text-anchor="middle" fill="#222222">4. Google redirects back</text>
+  <text x="1040" y="927" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">/login/oauth2/code/google</text>
+  <text x="1040" y="942" font-size="10.5" text-anchor="middle" fill="#222222">with one-time code param</text>
+
+  <!-- 5 Security -->
+  <rect x="1170" y="370" width="200" height="100" rx="12" fill="#FFF2A8" stroke="#333333" stroke-width="2"/>
+  <text x="1270" y="392" font-size="11" font-weight="bold" text-anchor="middle" fill="#222222">5. Receive code</text>
+  <text x="1270" y="407" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">OAuth2LoginAuthenticationFilter</text>
+  <text x="1270" y="422" font-size="10.5" text-anchor="middle" fill="#222222">Token call, server to server</text>
+  <text x="1270" y="437" font-size="10.5" text-anchor="middle" fill="#222222">Output: OidcUser + ID token</text>
+
+  <!-- 6 Services -->
+  <rect x="1400" y="630" width="200" height="100" rx="12" fill="#B9E8C0" stroke="#333333" stroke-width="2"/>
+  <text x="1500" y="652" font-size="10.5" font-family="Consolas, 'Courier New', monospace" font-weight="bold" text-anchor="middle" fill="#222222">6. CustomOidcUserService</text>
+  <text x="1500" y="667" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">.loadUser(OidcUserRequest)</text>
+  <text x="1500" y="682" font-size="10.5" text-anchor="middle" fill="#222222">Checks email_verified claim</text>
+  <text x="1500" y="697" font-size="10.5" text-anchor="middle" fill="#222222">Calls UserService</text>
+  <text x="1500" y="712" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">findOrCreateGoogleUser()</text>
+
+  <!-- 7 Services -->
+  <rect x="1630" y="630" width="200" height="100" rx="12" fill="#B9E8C0" stroke="#333333" stroke-width="2"/>
+  <text x="1730" y="652" font-size="11" font-weight="bold" text-anchor="middle" fill="#222222">7. UserRepository</text>
+  <text x="1730" y="667" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">findByProviderAndGoogleId()</text>
+  <text x="1730" y="682" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">save(User)</text>
+  <text x="1730" y="697" font-size="10.5" text-anchor="middle" fill="#222222">Unique (provider, google_id)</text>
+
+  <!-- 8 Security -->
+  <rect x="1860" y="370" width="200" height="100" rx="12" fill="#FFF2A8" stroke="#333333" stroke-width="2"/>
+  <text x="1960" y="392" font-size="10.5" font-family="Consolas, 'Courier New', monospace" font-weight="bold" text-anchor="middle" fill="#222222">8. OAuth2LoginSuccessHandler</text>
+  <text x="1960" y="407" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">.onAuthenticationSuccess()</text>
+  <text x="1960" y="422" font-size="10.5" text-anchor="middle" fill="#222222">Calls UserService</text>
+  <text x="1960" y="437" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">findByGoogleSubject()</text>
+
+  <!-- Row 2 boxes: steps 9 to 12 -->
+  <!-- 9 Services -->
+  <rect x="250" y="750" width="200" height="100" rx="12" fill="#B9E8C0" stroke="#333333" stroke-width="2"/>
+  <text x="350" y="772" font-size="10.5" font-family="Consolas, 'Courier New', monospace" font-weight="bold" text-anchor="middle" fill="#222222">9. JwtService</text>
+  <text x="350" y="787" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">.generateToken(User)</text>
+  <text x="350" y="802" font-size="10.5" text-anchor="middle" fill="#222222">HS256, sub = user id</text>
+  <text x="350" y="817" font-size="10.5" text-anchor="middle" fill="#222222">email, role, iss, exp = 1h</text>
+  <text x="350" y="832" font-size="10.5" text-anchor="middle" fill="#222222">signed with JWT_SECRET</text>
+
+  <!-- 10 Security -->
+  <rect x="480" y="490" width="200" height="100" rx="12" fill="#FFF2A8" stroke="#333333" stroke-width="2"/>
+  <text x="580" y="512" font-size="10.5" font-family="Consolas, 'Courier New', monospace" font-weight="bold" text-anchor="middle" fill="#222222">10. AuthCookies</text>
+  <text x="580" y="527" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">.issue(token, exp, secure)</text>
+  <text x="580" y="542" font-size="10.5" text-anchor="middle" fill="#222222">Set-Cookie: ELECTROMART_JWT</text>
+  <text x="580" y="557" font-size="10.5" text-anchor="middle" fill="#222222">HttpOnly, SameSite=Lax, Path=/</text>
+  <text x="580" y="572" font-size="10.5" text-anchor="middle" fill="#222222">then session.invalidate()</text>
+
+  <!-- 11 Security -->
+  <rect x="710" y="490" width="200" height="100" rx="12" fill="#FFF2A8" stroke="#333333" stroke-width="2"/>
+  <text x="810" y="512" font-size="11" font-weight="bold" text-anchor="middle" fill="#222222">11. Redirect</text>
+  <text x="810" y="527" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">sendRedirect(</text>
+  <text x="810" y="542" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">frontendUrl() + "/products")</text>
+  <text x="810" y="557" font-size="10.5" text-anchor="middle" fill="#222222">Browser goes to React app</text>
+
+  <!-- 12 Frontend -->
+  <rect x="940" y="230" width="200" height="100" rx="12" fill="#A8D8F0" stroke="#333333" stroke-width="2"/>
+  <text x="1040" y="252" font-size="10.5" font-family="Consolas, 'Courier New', monospace" font-weight="bold" text-anchor="middle" fill="#222222">12. AuthContext</text>
+  <text x="1040" y="267" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">.refreshUser()</text>
+  <text x="1040" y="282" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">getCurrentUser()</text>
+  <text x="1040" y="297" font-size="10.5" text-anchor="middle" fill="#222222">in authService.js</text>
+  <text x="1040" y="312" font-size="10.5" text-anchor="middle" fill="#222222">Browser attaches cookie</text>
+
+  <!-- Continuation note -->
+  <text x="1960" y="486" font-size="10" font-style="italic" text-anchor="middle" fill="#555555">steps 9-12 continue below</text>
+
+  <!-- Band: every later request -->
+  <rect x="30" y="1160" width="2140" height="260" fill="#F7F7F7" stroke="#999999" stroke-width="1.5"/>
+  <rect x="30" y="1160" width="190" height="260" fill="#E0E0E0" stroke="#333333" stroke-width="2"/>
+  <text x="125" y="1280" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">Every later</text>
+  <text x="125" y="1300" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">request</text>
+
+  <!-- 13 Security -->
+  <rect x="250" y="1190" width="200" height="110" rx="12" fill="#FFF2A8" stroke="#333333" stroke-width="2"/>
+  <text x="350" y="1212" font-size="10.5" font-family="Consolas, 'Courier New', monospace" font-weight="bold" text-anchor="middle" fill="#222222">13. JwtAuthenticationFilter</text>
+  <text x="350" y="1227" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">.doFilterInternal()</text>
+  <text x="350" y="1242" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">JwtService.parseToken()</text>
+  <text x="350" y="1257" font-size="10.5" text-anchor="middle" fill="#222222">Checks signature, issuer, exp</text>
+  <text x="350" y="1272" font-size="10.5" text-anchor="middle" fill="#222222">Valid: set SecurityContext</text>
+
+  <!-- 14 Services -->
+  <rect x="480" y="1190" width="200" height="110" rx="12" fill="#B9E8C0" stroke="#333333" stroke-width="2"/>
+  <text x="580" y="1212" font-size="10.5" font-family="Consolas, 'Courier New', monospace" font-weight="bold" text-anchor="middle" fill="#222222">14. UserController</text>
+  <text x="580" y="1227" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">.me(Authentication)</text>
+  <text x="580" y="1242" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">UserService.getById(id)</text>
+  <text x="580" y="1257" font-size="10.5" text-anchor="middle" fill="#222222">Returns UserResponse</text>
+  <text x="580" y="1272" font-size="10.5" text-anchor="middle" fill="#222222">200 JSON</text>
+
+  <!-- 15 Frontend -->
+  <rect x="710" y="1190" width="200" height="110" rx="12" fill="#A8D8F0" stroke="#333333" stroke-width="2"/>
+  <text x="810" y="1212" font-size="10.5" font-family="Consolas, 'Courier New', monospace" font-weight="bold" text-anchor="middle" fill="#222222">15. ProductsPage</text>
+  <text x="810" y="1227" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">productService.fetchProducts()</text>
+  <text x="810" y="1242" font-size="10.5" font-family="Consolas, 'Courier New', monospace" text-anchor="middle" fill="#222222">ProductController.list()</text>
+  <text x="810" y="1257" font-size="10.5" text-anchor="middle" fill="#222222">Returns 10 products</text>
+  <text x="810" y="1272" font-size="10.5" text-anchor="middle" fill="#222222">Products page shows</text>
+
+  <!-- Failure path box -->
+  <rect x="960" y="1190" width="600" height="110" rx="12" fill="#FFEBEE" stroke="#D32F2F" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="1260" y="1215" font-size="13" font-weight="bold" text-anchor="middle" fill="#B71C1C">Failure path (red dashed)</text>
+  <text x="1260" y="1237" font-size="12" text-anchor="middle" fill="#222222">Invalid or expired JWT sets request attribute electromart.auth.error.</text>
+  <text x="1260" y="1256" font-size="12" text-anchor="middle" fill="#222222">SecurityConfig JSON entry point returns 401.</text>
+  <text x="1260" y="1275" font-size="12" text-anchor="middle" fill="#222222">Frontend calls refreshUser() and redirects to /login.</text>
+
+  <!-- Key point box -->
+  <rect x="1600" y="1190" width="550" height="110" rx="12" fill="#FFFFFF" stroke="#333333" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="1875" y="1215" font-size="13" font-weight="bold" text-anchor="middle" fill="#222222">Key point</text>
+  <text x="1875" y="1237" font-size="12" text-anchor="middle" fill="#222222">The server keeps no session token.</text>
+  <text x="1875" y="1256" font-size="12" text-anchor="middle" fill="#222222">Each request carries the cookie and JwtAuthenticationFilter verifies it.</text>
+  <text x="1875" y="1275" font-size="12" text-anchor="middle" fill="#222222">Logout only clears the cookie.</text>
+
+  <!-- Arrows: row 1 -->
+  <path d="M450,160 C465,160 465,420 480,420" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M680,420 C695,420 695,940 710,940" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M910,940 L940,940" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M1140,940 C1155,940 1155,420 1170,420" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M1370,420 C1385,420 1385,680 1400,680" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M1600,680 L1630,680" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M1830,680 C1845,680 1845,420 1860,420" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Arrows: row 2 -->
+  <path d="M450,800 C465,800 465,540 480,540" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M680,540 L710,540" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M910,540 C925,540 925,280 940,280" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Arrows: band -->
+  <path d="M450,1245 L480,1245" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M680,1245 L710,1245" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M910,1245 L960,1245" fill="none" stroke="#D32F2F" stroke-width="2" stroke-dasharray="8,5" marker-end="url(#arrowRed)"/>
+
+  <!-- Footer -->
+  <text x="1100" y="1470" font-size="14" text-anchor="middle" fill="#444444">Secrets come from environment variables. Never inside the image.</text>
+</svg>

@@ -1,0 +1,411 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2150" viewBox="0 0 1600 2150" font-family="'Segoe UI', 'Comic Sans MS', -apple-system, BlinkMacSystemFont, Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="40%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Card Gradients -->
+    <linearGradient id="userGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="reactGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#0891B2"/>
+    </linearGradient>
+    <linearGradient id="springGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="googleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="jwtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#BE185D"/>
+    </linearGradient>
+    <linearGradient id="cookieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,1 L9,5 L0,9 z" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,1 L9,5 L0,9 z" fill="#34D399"/>
+    </marker>
+  </defs>
+
+  <!-- Deep Cosmic Background -->
+  <rect width="1600" height="2150" fill="url(#bgGradient)"/>
+
+  <!-- Stars / Tech Sparks Background dots -->
+  <g opacity="0.3">
+    <circle cx="100" cy="80" r="2" fill="#fff"/>
+    <circle cx="350" cy="180" r="1.5" fill="#fff"/>
+    <circle cx="850" cy="120" r="2" fill="#fff"/>
+    <circle cx="1400" cy="90" r="2.5" fill="#fff"/>
+    <circle cx="1500" cy="400" r="1.5" fill="#fff"/>
+    <circle cx="200" cy="700" r="2" fill="#fff"/>
+    <circle cx="1450" cy="1100" r="2" fill="#fff"/>
+    <circle cx="100" cy="1500" r="1.5" fill="#fff"/>
+    <circle cx="1520" cy="1800" r="2.5" fill="#fff"/>
+  </g>
+
+  <!-- Title & Subtitle Banner -->
+  <g transform="translate(800, 70)" text-anchor="middle">
+    <rect x="-480" y="-35" width="960" height="90" rx="24" fill="#1E293B" stroke="#6366F1" stroke-width="2" filter="url(#cardShadow)"/>
+    <text y="10" fill="#F8FAFC" font-size="28" font-weight="900" letter-spacing="1">⚡ THE CARTOON GUIDE TO GOOGLE OAuth2 + JWT COOKIES 🍪</text>
+    <text y="38" fill="#94A3B8" font-size="16" font-weight="600">From Clicking "Continue with Google" to Sealed HttpOnly JWT Cookie</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- STEP 1: USER CLICKS BUTTON IN REACT        -->
+  <!-- ========================================== -->
+  <g transform="translate(150, 180)">
+    <rect width="1300" height="175" rx="20" fill="#1E293B" stroke="#38BDF8" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Avatar / Icon -->
+    <g transform="translate(30, 25)">
+      <circle cx="60" cy="60" r="50" fill="url(#userGrad)"/>
+      <!-- Cartoon User Face -->
+      <circle cx="60" cy="50" r="28" fill="#FEF08A"/>
+      <ellipse cx="50" cy="48" rx="3.5" ry="5" fill="#1E293B"/>
+      <ellipse cx="70" cy="48" rx="3.5" ry="5" fill="#1E293B"/>
+      <path d="M52 62 Q60 72 68 62" stroke="#1E293B" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M40 38 Q60 20 80 38" fill="#78350F"/>
+      <!-- Laptop -->
+      <rect x="35" y="85" width="50" height="26" rx="4" fill="#CBD5E1"/>
+      <path d="M30 111 L90 111" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- Text info -->
+    <g transform="translate(170, 30)">
+      <rect x="0" y="0" width="90" height="26" rx="8" fill="#0284C7"/>
+      <text x="45" y="18" fill="#fff" font-size="13" font-weight="800" text-anchor="middle">STEP 1</text>
+      <text x="105" y="19" fill="#38BDF8" font-size="20" font-weight="bold">User clicks "Continue with Google"</text>
+      
+      <text x="0" y="55" fill="#E2E8F0" font-size="14">
+        🧑 <tspan font-weight="bold">Story:</tspan> The shopper wants to log in. Instead of typing a password, they smash the friendly Google button!
+      </text>
+
+      <!-- Technical Code Badge -->
+      <g transform="translate(0, 72)">
+        <rect width="1070" height="42" rx="10" fill="#0F172A" stroke="#334155"/>
+        <text x="20" y="26" fill="#A5F3FC" font-size="13" font-family="Consolas, monospace">
+          <tspan fill="#F472B6">UI:</tspan> LoginPage.jsx  ➜  <tspan fill="#FCD34D">authService.loginWithGoogle()</tspan>  ➜  window.location.href = <tspan fill="#34D399">'http://localhost:8080/oauth2/authorization/google'</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M800 355 L800 395" stroke="#38BDF8" stroke-width="4" marker-end="url(#arrow)" stroke-dasharray="6,4"/>
+
+  <!-- ========================================== -->
+  <!-- STEP 2: SPRING SECURITY BUILDS GOOGLE REDIRECT -->
+  <!-- ========================================== -->
+  <g transform="translate(150, 400)">
+    <rect width="1300" height="175" rx="20" fill="#1E293B" stroke="#10B981" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Avatar: Spring Gatekeeper -->
+    <g transform="translate(30, 25)">
+      <circle cx="60" cy="60" r="50" fill="url(#springGrad)"/>
+      <!-- Spring Leaf & Shield -->
+      <polygon points="60,25 90,40 85,85 60,100 35,85 30,40" fill="#ECFDF5" stroke="#047857" stroke-width="3"/>
+      <!-- Eyes on shield -->
+      <circle cx="50" cy="55" r="4" fill="#047857"/>
+      <circle cx="70" cy="55" r="4" fill="#047857"/>
+      <path d="M52 70 Q60 78 68 70" stroke="#047857" stroke-width="3" fill="none"/>
+    </g>
+
+    <g transform="translate(170, 30)">
+      <rect x="0" y="0" width="90" height="26" rx="8" fill="#059669"/>
+      <text x="45" y="18" fill="#fff" font-size="13" font-weight="800" text-anchor="middle">STEP 2</text>
+      <text x="105" y="19" fill="#34D399" font-size="20" font-weight="bold">Spring Gatekeeper sends Browser to Google (HTTP 302)</text>
+      
+      <text x="0" y="55" fill="#E2E8F0" font-size="14">
+        🛡️ <tspan font-weight="bold">Story:</tspan> Spring Security intercepts the call: "Wait! Go prove your identity at Google first! Take my client_id with you!"
+      </text>
+
+      <g transform="translate(0, 72)">
+        <rect width="1070" height="42" rx="10" fill="#0F172A" stroke="#334155"/>
+        <text x="20" y="26" fill="#A7F3D0" font-size="13" font-family="Consolas, monospace">
+          <tspan fill="#F472B6">Filter:</tspan> OAuth2AuthorizationRequestRedirectFilter  ➜  <tspan fill="#FCD34D">HTTP 302 Redirect</tspan> to accounts.google.com with <tspan fill="#38BDF8">client_id</tspan>, <tspan fill="#38BDF8">scope=openid profile email</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M800 575 L800 615" stroke="#38BDF8" stroke-width="4" marker-end="url(#arrow)" stroke-dasharray="6,4"/>
+
+  <!-- ========================================== -->
+  <!-- STEP 3: GOOGLE AUTHENTICATES & SENDS CODE  -->
+  <!-- ========================================== -->
+  <g transform="translate(150, 620)">
+    <rect width="1300" height="175" rx="20" fill="#1E293B" stroke="#F59E0B" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Avatar: Google Identity Booth -->
+    <g transform="translate(30, 25)">
+      <circle cx="60" cy="60" r="50" fill="url(#googleGrad)"/>
+      <!-- Giant colorful "G" letter -->
+      <circle cx="60" cy="60" r="32" fill="#fff"/>
+      <path d="M60 42 A 18 18 0 1 0 78 60 L 60 60" fill="none" stroke="#EA4335" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="53" cy="55" r="2.5" fill="#1E293B"/>
+      <circle cx="65" cy="55" r="2.5" fill="#1E293B"/>
+      <path d="M55 68 Q60 72 65 68" stroke="#1E293B" stroke-width="2" fill="none"/>
+    </g>
+
+    <g transform="translate(170, 30)">
+      <rect x="0" y="0" width="90" height="26" rx="8" fill="#D97706"/>
+      <text x="45" y="18" fill="#fff" font-size="13" font-weight="800" text-anchor="middle">STEP 3</text>
+      <text x="105" y="19" fill="#FBBF24" font-size="20" font-weight="bold">Google verifies user &amp; hands back a Golden Ticket (Code)</text>
+      
+      <text x="0" y="55" fill="#E2E8F0" font-size="14">
+        🔍 <tspan font-weight="bold">Story:</tspan> Google checks credentials/2FA and user consents. Google gives browser a temporary code &amp; redirects to backend!
+      </text>
+
+      <g transform="translate(0, 72)">
+        <rect width="1070" height="42" rx="10" fill="#0F172A" stroke="#334155"/>
+        <text x="20" y="26" fill="#FDE68A" font-size="13" font-family="Consolas, monospace">
+          <tspan fill="#F472B6">Redirect:</tspan> HTTP 302  ➜  <tspan fill="#38BDF8">http://localhost:8080/login/oauth2/code/google?code=AUTH_CODE_XYZ</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow 3 to 4 -->
+  <path d="M800 795 L800 835" stroke="#38BDF8" stroke-width="4" marker-end="url(#arrow)" stroke-dasharray="6,4"/>
+
+  <!-- ========================================== -->
+  <!-- STEP 4: SPRING EXCHANGES CODE FOR TOKENS   -->
+  <!-- ========================================== -->
+  <g transform="translate(150, 840)">
+    <rect width="1300" height="175" rx="20" fill="#1E293B" stroke="#10B981" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Avatar: Backstage Courier -->
+    <g transform="translate(30, 25)">
+      <circle cx="60" cy="60" r="50" fill="url(#springGrad)"/>
+      <!-- Robot Courier -->
+      <rect x="40" y="40" width="40" height="35" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+      <circle cx="50" cy="52" r="3.5" fill="#047857"/>
+      <circle cx="70" cy="52" r="3.5" fill="#047857"/>
+      <line x1="50" y1="64" x2="70" y2="64" stroke="#047857" stroke-width="3"/>
+      <!-- Antenna -->
+      <line x1="60" y1="40" x2="60" y2="28" stroke="#047857" stroke-width="2"/>
+      <circle cx="60" cy="25" r="4" fill="#F59E0B"/>
+    </g>
+
+    <g transform="translate(170, 30)">
+      <rect x="0" y="0" width="90" height="26" rx="8" fill="#059669"/>
+      <text x="45" y="18" fill="#fff" font-size="13" font-weight="800" text-anchor="middle">STEP 4</text>
+      <text x="105" y="19" fill="#34D399" font-size="20" font-weight="bold">Backchannel Secret Trade: Code ➜ Google ID Token</text>
+      
+      <text x="0" y="55" fill="#E2E8F0" font-size="14">
+        🤝 <tspan font-weight="bold">Story:</tspan> Behind the scenes (Server-to-Server), Spring trades the code + GOOGLE_CLIENT_SECRET for Google's signed ID Token.
+      </text>
+
+      <g transform="translate(0, 72)">
+        <rect width="1070" height="42" rx="10" fill="#0F172A" stroke="#334155"/>
+        <text x="20" y="26" fill="#A7F3D0" font-size="13" font-family="Consolas, monospace">
+          <tspan fill="#F472B6">Filter:</tspan> OAuth2LoginAuthenticationFilter  ➜  POST to https://oauth2.googleapis.com/token  ➜  Returns <tspan fill="#FCD34D">OidcUser</tspan> (sub, email)
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow 4 to 5 -->
+  <path d="M800 1015 L800 1055" stroke="#38BDF8" stroke-width="4" marker-end="url(#arrow)" stroke-dasharray="6,4"/>
+
+  <!-- ========================================== -->
+  <!-- STEP 5: CUSTOM USER SERVICE & DB SYNC      -->
+  <!-- ========================================== -->
+  <g transform="translate(150, 1060)">
+    <rect width="1300" height="185" rx="20" fill="#1E293B" stroke="#6366F1" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Avatar: Inspector & Database -->
+    <g transform="translate(30, 30)">
+      <circle cx="60" cy="60" r="50" fill="url(#reactGrad)"/>
+      <!-- Database Cylinders -->
+      <ellipse cx="60" cy="40" rx="25" ry="8" fill="#E0F2FE" stroke="#0284C7" stroke-width="2"/>
+      <path d="M35 40 v25 c0 5 12 8 25 8 s25 -3 25 -8 v-25" fill="#BAE6FD" stroke="#0284C7" stroke-width="2"/>
+      <path d="M35 65 v25 c0 5 12 8 25 8 s25 -3 25 -8 v-25" fill="#7DD3FC" stroke="#0284C7" stroke-width="2"/>
+    </g>
+
+    <g transform="translate(170, 25)">
+      <rect x="0" y="0" width="90" height="26" rx="8" fill="#4F46E5"/>
+      <text x="45" y="18" fill="#fff" font-size="13" font-weight="800" text-anchor="middle">STEP 5</text>
+      <text x="105" y="19" fill="#818CF8" font-size="20" font-weight="bold">Verify Email &amp; Find or Create User in MySQL</text>
+      
+      <text x="0" y="52" fill="#E2E8F0" font-size="14">
+        🗄️ <tspan font-weight="bold">Story:</tspan> Inspector verifies `email_verified == true`. Looks up MySQL: "Have we seen this Google sub ID? No? Create new User!"
+      </text>
+
+      <g transform="translate(0, 68)">
+        <rect width="1070" height="52" rx="10" fill="#0F172A" stroke="#334155"/>
+        <text x="20" y="22" fill="#C7D2FE" font-size="12.5" font-family="Consolas, monospace">
+          <tspan fill="#F472B6">1.</tspan> CustomOidcUserService.loadUser(request)  ➜  Asserts oidcUser.getAttribute("email_verified") == true
+        </text>
+        <text x="20" y="42" fill="#C7D2FE" font-size="12.5" font-family="Consolas, monospace">
+          <tspan fill="#F472B6">2.</tspan> UserService.findOrCreateGoogleUser()  ➜  UserRepository.findByProviderAndGoogleId(GOOGLE, sub)  ➜  save()
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow 5 to 6 -->
+  <path d="M800 1245 L800 1285" stroke="#38BDF8" stroke-width="4" marker-end="url(#arrow)" stroke-dasharray="6,4"/>
+
+  <!-- ========================================== -->
+  <!-- STEP 6: SUCCESS HANDLER MINTS OUR JWT      -->
+  <!-- ========================================== -->
+  <g transform="translate(150, 1290)">
+    <rect width="1300" height="185" rx="20" fill="#1E293B" stroke="#EC4899" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Avatar: JWT Jeweler / Mint -->
+    <g transform="translate(30, 30)">
+      <circle cx="60" cy="60" r="50" fill="url(#jwtGrad)"/>
+      <!-- VIP Badge / Medallion -->
+      <polygon points="60,28 72,48 95,50 78,68 83,92 60,78 37,92 42,68 25,50 48,48" fill="#FDF2F8" stroke="#BE185D" stroke-width="2"/>
+      <circle cx="60" cy="58" r="12" fill="#F472B6"/>
+      <text x="60" y="63" font-size="12" font-weight="900" fill="#fff" text-anchor="middle">JWT</text>
+    </g>
+
+    <g transform="translate(170, 25)">
+      <rect x="0" y="0" width="90" height="26" rx="8" fill="#BE185D"/>
+      <text x="45" y="18" fill="#fff" font-size="13" font-weight="800" text-anchor="middle">STEP 6</text>
+      <text x="105" y="19" fill="#F472B6" font-size="20" font-weight="bold">Success Handler Mints ElectroMart JWT Token</text>
+      
+      <text x="0" y="52" fill="#E2E8F0" font-size="14">
+        💎 <tspan font-weight="bold">Story:</tspan> Google's job is DONE. ElectroMart mints its OWN local VIP token with local User ID, email, ROLE_USER, signed with HMAC-SHA256!
+      </text>
+
+      <g transform="translate(0, 68)">
+        <rect width="1070" height="52" rx="10" fill="#0F172A" stroke="#334155"/>
+        <text x="20" y="22" fill="#FBCFE8" font-size="12.5" font-family="Consolas, monospace">
+          <tspan fill="#F472B6">Handler:</tspan> OAuth2LoginSuccessHandler.onAuthenticationSuccess()
+        </text>
+        <text x="20" y="42" fill="#FBCFE8" font-size="12.5" font-family="Consolas, monospace">
+          <tspan fill="#F472B6">Mint:</tspan> JwtService.generateToken(user)  ➜  Claims: sub=user.id, email, role=ROLE_USER, exp=1 hour, secret=JWT_SECRET
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow 6 to 7 -->
+  <path d="M800 1475 L800 1515" stroke="#38BDF8" stroke-width="4" marker-end="url(#arrow)" stroke-dasharray="6,4"/>
+
+  <!-- ========================================== -->
+  <!-- STEP 7: SEAL JWT INTO HTTPONLY COOKIE      -->
+  <!-- ========================================== -->
+  <g transform="translate(150, 1520)">
+    <rect width="1300" height="185" rx="20" fill="#1E293B" stroke="#8B5CF6" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Avatar: Locked Cookie Jar -->
+    <g transform="translate(30, 30)">
+      <circle cx="60" cy="60" r="50" fill="url(#cookieGrad)"/>
+      <!-- Cartoon Cookie with Lock -->
+      <circle cx="60" cy="60" r="32" fill="#D97706"/>
+      <circle cx="50" cy="50" r="4" fill="#78350F"/>
+      <circle cx="72" cy="52" r="4" fill="#78350F"/>
+      <circle cx="58" cy="70" r="4" fill="#78350F"/>
+      <!-- Padlock -->
+      <rect x="52" y="55" width="16" height="14" rx="2" fill="#FEF08A" stroke="#78350F" stroke-width="1.5"/>
+      <path d="M55 55 v-5 a5 5 0 0 1 10 0 v5" fill="none" stroke="#78350F" stroke-width="2"/>
+    </g>
+
+    <g transform="translate(170, 25)">
+      <rect x="0" y="0" width="90" height="26" rx="8" fill="#6D28D9"/>
+      <text x="45" y="18" fill="#fff" font-size="13" font-weight="800" text-anchor="middle">STEP 7</text>
+      <text x="105" y="19" fill="#A78BFA" font-size="20" font-weight="bold">Lock JWT in HttpOnly Cookie &amp; Redirect to React</text>
+      
+      <text x="0" y="52" fill="#E2E8F0" font-size="14">
+        🍪 <tspan font-weight="bold">Story:</tspan> The JWT goes into a hardened cookie jar. JavaScript CANNOT read it (immune to XSS). Browser heads to /products!
+      </text>
+
+      <g transform="translate(0, 68)">
+        <rect width="1070" height="52" rx="10" fill="#0F172A" stroke="#334155"/>
+        <text x="20" y="22" fill="#DDD6FE" font-size="12.5" font-family="Consolas, monospace">
+          <tspan fill="#F472B6">Cookie:</tspan> AuthCookies.issue(token, 1h, secure)  ➜  Set-Cookie: ELECTROMART_JWT; HttpOnly; SameSite=Lax; Path=/
+        </text>
+        <text x="20" y="42" fill="#DDD6FE" font-size="12.5" font-family="Consolas, monospace">
+          <tspan fill="#F472B6">Session:</tspan> request.getSession(false).invalidate()  ➜  response.sendRedirect("http://localhost:5173/products")
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow 7 to 8 -->
+  <path d="M800 1705 L800 1745" stroke="#34D399" stroke-width="4" marker-end="url(#arrowGreen)" stroke-dasharray="6,4"/>
+
+  <!-- ========================================== -->
+  <!-- STEP 8: SUBSEQUENT REQUESTS VERIFIED       -->
+  <!-- ========================================== -->
+  <g transform="translate(150, 1750)">
+    <rect width="1300" height="195" rx="20" fill="#1E293B" stroke="#34D399" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Avatar: Storefront VIP entrance -->
+    <g transform="translate(30, 35)">
+      <circle cx="60" cy="60" r="50" fill="url(#springGrad)"/>
+      <!-- Green Checkmark & Shopping bag -->
+      <rect x="42" y="48" width="36" height="34" rx="4" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+      <path d="M52 48 v-8 a8 8 0 0 1 16 0 v8" fill="none" stroke="#047857" stroke-width="2"/>
+      <path d="M48 64 L56 72 L72 54" fill="none" stroke="#10B981" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <g transform="translate(170, 25)">
+      <rect x="0" y="0" width="90" height="26" rx="8" fill="#047857"/>
+      <text x="45" y="18" fill="#fff" font-size="13" font-weight="800" text-anchor="middle">STEP 8</text>
+      <text x="105" y="19" fill="#34D399" font-size="20" font-weight="bold">Storefront Doors Open! Automatic JWT Validation on APIs</text>
+      
+      <text x="0" y="52" fill="#E2E8F0" font-size="14">
+        🎉 <tspan font-weight="bold">Story:</tspan> React loads ProductsPage. Browser silently carries the cookie on all API calls. The Filter inspects the seal instantly!
+      </text>
+
+      <g transform="translate(0, 68)">
+        <rect width="1070" height="60" rx="10" fill="#0F172A" stroke="#334155"/>
+        <text x="20" y="22" fill="#A7F3D0" font-size="12" font-family="Consolas, monospace">
+          <tspan fill="#F472B6">Filter:</tspan> JwtAuthenticationFilter.doFilterInternal()  ➜  JwtService.parseToken(cookie)  ➜  SecurityContextHolder set!
+        </text>
+        <text x="20" y="42" fill="#A7F3D0" font-size="12" font-family="Consolas, monospace">
+          <tspan fill="#F472B6">APIs:</tspan> GET /api/users/me (UserController.me) &amp; GET /api/products (ProductController.list)  ➜  HTTP 200 OK!
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- BOTTOM SUMMARY PILLS / ARCHITECTURE TIPS   -->
+  <!-- ========================================== -->
+  <g transform="translate(150, 1970)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="410" height="110" rx="16" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="30" y="35" fill="#38BDF8" font-size="16" font-weight="bold">🔒 Why HttpOnly Cookie?</text>
+    <text x="30" y="60" fill="#94A3B8" font-size="13">JavaScript running in browser</text>
+    <text x="30" y="80" fill="#CBD5E1" font-size="13">cannot read document.cookie.</text>
+    <text x="30" y="100" fill="#34D399" font-size="13">Zero risk of XSS token theft!</text>
+
+    <!-- Pill 2 -->
+    <rect x="445" y="0" width="410" height="110" rx="16" fill="#1E293B" stroke="#EC4899" stroke-width="1.5"/>
+    <text x="475" y="35" fill="#F472B6" font-size="16" font-weight="bold">⚡ Stateless Spring Backend</text>
+    <text x="475" y="60" fill="#94A3B8" font-size="13">Spring keeps NO session in RAM.</text>
+    <text x="475" y="80" fill="#CBD5E1" font-size="13">JWT signature verifies the user</text>
+    <text x="475" y="100" fill="#34D399" font-size="13">without database hits on every request!</text>
+
+    <!-- Pill 3 -->
+    <rect x="890" y="0" width="410" height="110" rx="16" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="920" y="35" fill="#FBBF24" font-size="16" font-weight="bold">🛡️ CSRF &amp; SameSite=Lax</text>
+    <text x="920" y="60" fill="#94A3B8" font-size="13">SameSite=Lax defends against CSRF.</text>
+    <text x="920" y="80" fill="#CBD5E1" font-size="13">State-changing endpoints require</text>
+    <text x="920" y="100" fill="#34D399" font-size="13">the X-XSRF-TOKEN header.</text>
+  </g>
+
+  <!-- Footer Watermark -->
+  <text x="800" y="2120" fill="#475569" font-size="13" font-weight="600" text-anchor="middle">ElectroMart Security Architecture • Generated for Visual Documentation</text>
+</svg>

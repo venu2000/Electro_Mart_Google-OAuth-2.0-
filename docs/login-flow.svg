@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="900" viewBox="0 0 2100 900" font-family="'Comic Sans MS', 'Trebuchet MS', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333333"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="2100" height="900" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="1050" y="55" font-size="30" font-weight="bold" fill="#222222" text-anchor="middle">Continue with Google to JWT in Cookie Login Flow</text>
+
+  <!-- Swimlanes -->
+  <rect x="30" y="90" width="2040" height="130" fill="#EAF6FD" stroke="#999999" stroke-width="1.5"/>
+  <rect x="30" y="240" width="2040" height="130" fill="#FFFBE6" stroke="#999999" stroke-width="1.5"/>
+  <rect x="30" y="390" width="2040" height="130" fill="#EEF9F0" stroke="#999999" stroke-width="1.5"/>
+  <rect x="30" y="540" width="2040" height="130" fill="#FFF1E6" stroke="#999999" stroke-width="1.5"/>
+
+  <!-- Lane labels -->
+  <rect x="30" y="90" width="170" height="130" fill="#A8D8F0" stroke="#333333" stroke-width="2"/>
+  <rect x="30" y="240" width="170" height="130" fill="#FFF2A8" stroke="#333333" stroke-width="2"/>
+  <rect x="30" y="390" width="170" height="130" fill="#B9E8C0" stroke="#333333" stroke-width="2"/>
+  <rect x="30" y="540" width="170" height="130" fill="#FFD1A6" stroke="#333333" stroke-width="2"/>
+  <text x="115" y="160" font-size="18" font-weight="bold" text-anchor="middle" fill="#222222">User</text>
+  <text x="115" y="300" font-size="16" font-weight="bold" text-anchor="middle" fill="#222222">React Frontend</text>
+  <text x="115" y="320" font-size="12" text-anchor="middle" fill="#222222">localhost:5173</text>
+  <text x="115" y="450" font-size="16" font-weight="bold" text-anchor="middle" fill="#222222">Spring Boot</text>
+  <text x="115" y="470" font-size="16" font-weight="bold" text-anchor="middle" fill="#222222">Backend</text>
+  <text x="115" y="490" font-size="12" text-anchor="middle" fill="#222222">localhost:8080</text>
+  <text x="115" y="610" font-size="18" font-weight="bold" text-anchor="middle" fill="#222222">Google</text>
+
+  <!-- Step boxes: lane 1 User (steps 1) -->
+  <rect x="260" y="110" width="170" height="90" rx="14" fill="#A8D8F0" stroke="#333333" stroke-width="2"/>
+  <text x="345" y="148" font-size="11" text-anchor="middle" fill="#222222">1. User clicks</text>
+  <text x="345" y="165" font-size="11" text-anchor="middle" fill="#222222">Continue with Google</text>
+
+  <!-- Frontend (step 2) -->
+  <rect x="490" y="260" width="170" height="90" rx="14" fill="#FFF2A8" stroke="#333333" stroke-width="2"/>
+  <text x="575" y="290" font-size="11" text-anchor="middle" fill="#222222">2. Frontend sends</text>
+  <text x="575" y="307" font-size="11" text-anchor="middle" fill="#222222">browser to backend</text>
+  <text x="575" y="324" font-size="11" text-anchor="middle" fill="#222222">/oauth2/authorization/google</text>
+
+  <!-- Backend (step 3) -->
+  <rect x="720" y="410" width="170" height="90" rx="14" fill="#B9E8C0" stroke="#333333" stroke-width="2"/>
+  <text x="805" y="440" font-size="11" text-anchor="middle" fill="#222222">3. Backend replies 302</text>
+  <text x="805" y="457" font-size="11" text-anchor="middle" fill="#222222">redirect to Google</text>
+  <text x="805" y="474" font-size="11" text-anchor="middle" fill="#222222">(client id, scopes)</text>
+
+  <!-- Google (step 4) -->
+  <rect x="950" y="560" width="170" height="90" rx="14" fill="#FFD1A6" stroke="#333333" stroke-width="2"/>
+  <text x="1035" y="590" font-size="11" text-anchor="middle" fill="#222222">4. User signs in</text>
+  <text x="1035" y="607" font-size="11" text-anchor="middle" fill="#222222">and approves on Google</text>
+
+  <!-- Google (step 5) -->
+  <rect x="1180" y="560" width="170" height="90" rx="14" fill="#FFD1A6" stroke="#333333" stroke-width="2"/>
+  <text x="1265" y="590" font-size="11" text-anchor="middle" fill="#222222">5. Google redirects back</text>
+  <text x="1265" y="607" font-size="11" text-anchor="middle" fill="#222222">with one-time code to</text>
+  <text x="1265" y="624" font-size="11" text-anchor="middle" fill="#222222">/login/oauth2/code/google</text>
+
+  <!-- Backend (step 6) -->
+  <rect x="1410" y="410" width="170" height="90" rx="14" fill="#B9E8C0" stroke="#333333" stroke-width="2"/>
+  <text x="1495" y="440" font-size="11" text-anchor="middle" fill="#222222">6. Backend exchanges</text>
+  <text x="1495" y="457" font-size="11" text-anchor="middle" fill="#222222">code for Google ID token</text>
+  <text x="1495" y="474" font-size="11" text-anchor="middle" fill="#222222">(server to server)</text>
+
+  <!-- Backend (step 7) -->
+  <rect x="1640" y="410" width="170" height="90" rx="14" fill="#B9E8C0" stroke="#333333" stroke-width="2"/>
+  <text x="1725" y="440" font-size="11" text-anchor="middle" fill="#222222">7. Check email_verified</text>
+  <text x="1725" y="457" font-size="11" text-anchor="middle" fill="#222222">find or create user</text>
+  <text x="1725" y="474" font-size="11" text-anchor="middle" fill="#222222">by Google sub</text>
+
+  <!-- Backend (step 8) -->
+  <rect x="1870" y="410" width="170" height="90" rx="14" fill="#B9E8C0" stroke="#333333" stroke-width="2"/>
+  <text x="1955" y="440" font-size="11" text-anchor="middle" fill="#222222">8. Create our JWT</text>
+  <text x="1955" y="457" font-size="11" text-anchor="middle" fill="#222222">sub, email, role</text>
+  <text x="1955" y="474" font-size="11" text-anchor="middle" fill="#222222">expires in 1h (HS256)</text>
+
+  <!-- Band: after login -->
+  <rect x="30" y="720" width="170" height="100" rx="14" fill="#E0E0E0" stroke="#333333" stroke-width="2"/>
+  <text x="115" y="772" font-size="16" font-weight="bold" text-anchor="middle" fill="#222222">After login</text>
+
+  <!-- Step 9 Backend -->
+  <rect x="260" y="720" width="170" height="100" rx="14" fill="#B9E8C0" stroke="#333333" stroke-width="2"/>
+  <text x="345" y="750" font-size="11" text-anchor="middle" fill="#222222">9. Backend sets</text>
+  <text x="345" y="767" font-size="11" text-anchor="middle" fill="#222222">cookie ELECTROMART_JWT</text>
+  <text x="345" y="784" font-size="11" text-anchor="middle" fill="#222222">redirects to /products</text>
+
+  <!-- Step 10 Frontend -->
+  <rect x="490" y="720" width="170" height="100" rx="14" fill="#FFF2A8" stroke="#333333" stroke-width="2"/>
+  <text x="575" y="750" font-size="11" text-anchor="middle" fill="#222222">10. Browser stores</text>
+  <text x="575" y="767" font-size="11" text-anchor="middle" fill="#222222">cookie, loads React app</text>
+  <text x="575" y="784" font-size="11" text-anchor="middle" fill="#222222">(cookie jar)</text>
+
+  <!-- Step 11 Backend -->
+  <rect x="720" y="720" width="170" height="100" rx="14" fill="#B9E8C0" stroke="#333333" stroke-width="2"/>
+  <text x="805" y="750" font-size="11" text-anchor="middle" fill="#222222">11. Frontend calls</text>
+  <text x="805" y="767" font-size="11" text-anchor="middle" fill="#222222">/api/users/me with cookie</text>
+  <text x="805" y="784" font-size="11" text-anchor="middle" fill="#222222">backend verifies JWT</text>
+
+  <!-- Step 12 Frontend -->
+  <rect x="950" y="720" width="170" height="100" rx="14" fill="#FFF2A8" stroke="#333333" stroke-width="2"/>
+  <text x="1035" y="750" font-size="11" text-anchor="middle" fill="#222222">12. /api/products</text>
+  <text x="1035" y="767" font-size="11" text-anchor="middle" fill="#222222">returns 10 products</text>
+  <text x="1035" y="784" font-size="11" text-anchor="middle" fill="#222222">products page shows</text>
+
+  <!-- Callout -->
+  <rect x="1180" y="720" width="860" height="100" rx="14" fill="#FFFFFF" stroke="#333333" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="1610" y="750" font-size="16" font-weight="bold" text-anchor="middle" fill="#222222">Key point</text>
+  <text x="1610" y="774" font-size="13" text-anchor="middle" fill="#222222">Server stores no session token. Every request carries the cookie,</text>
+  <text x="1610" y="794" font-size="13" text-anchor="middle" fill="#222222">and the server verifies it (signature and expiry).</text>
+
+  <!-- Arrows: lane flow -->
+  <path d="M430,155 C460,155 460,305 490,305" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M660,305 C690,305 690,455 720,455" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M890,455 C920,455 920,605 950,605" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M1120,605 L1180,605" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M1350,605 C1380,605 1380,455 1410,455" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M1580,455 L1640,455" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M1810,455 L1870,455" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Arrow: step 8 down to band -->
+  <path d="M1955,500 V700 H345 V718" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Arrows: band -->
+  <path d="M430,770 L490,770" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M660,770 L720,770" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M890,770 L950,770" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

@@ -1,0 +1,43 @@
+# All secrets come from environment variables. Nothing sensitive is hardcoded here.
+server:
+  port: 8080
+
+spring:
+  application:
+    name: electromart-backend
+  datasource:
+    # Defaults to the local MySQL "electromart" database (created if the user is allowed to).
+    url: ${DB_URL:jdbc:mysql://localhost:3306/electromart?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    open-in-view: false
+    hibernate:
+      # "update" creates/extends tables at startup. Use "validate" plus migrations in production.
+      ddl-auto: update
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            scope: [openid, profile, email]
+            # Must match the redirect URI registered in Google Cloud Console.
+            redirect-uri: "{baseUrl}/login/oauth2/code/google"
+
+app:
+  # Origin of the React app. Used for CORS and post-login/logout redirects.
+  frontend-url: ${FRONTEND_URL:http://localhost:5173}
+  jwt:
+    # HMAC key for signing OUR application JWT (min 32 bytes).
+    secret: ${JWT_SECRET}
+    expiration: 1h
+    issuer: electromart
+  cookie:
+    # Set COOKIE_SECURE=true when serving over HTTPS.
+    secure: ${COOKIE_SECURE:false}
+
+logging:
+  level:
+    com.electromart: INFO

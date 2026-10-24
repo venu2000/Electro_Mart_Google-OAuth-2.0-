@@ -1,0 +1,43 @@
+# Secrets: never commit real values
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+*.pem
+*.key
+*.keystore
+*.jks
+
+# Java / Maven build output
+target/
+backend/target/
+*.class
+
+# Frontend dependencies and build output
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+frontend/.vite/
+.eslintcache
+
+# Logs
+*.log
+logs/
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# OS generated files
+.DS_Store
+Thumbs.db
